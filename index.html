@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<html>
+
+<head>
+	<title>Мой новый проект</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" style="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body  ng-controller="firstCtrl">
+
+	<div>
+		2+6={{2+6}} 
+		<form>
+			<input type="text" ng-model="tempInput"/>
+		</form>
+	</div>
+	<div class="form-group">
+		<button type="submit" ng-click="newBtn()" id="btn1" class="btn btn-primary ma-font">GET A SHORT INTERNET NUMBER</button>
+	</div>
+	<div>
+
+		<p ng-repeat="task in taskArray">{{task}}</p>
+	</div>
+
+</body>
+</html>
