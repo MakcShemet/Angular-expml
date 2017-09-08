@@ -1,23 +1,31 @@
-angular.module("myApp", [])
-.controller("firstCtrl", function($scope){
-	//Переменная для формы
-	$scope.tempInput = "Тест";
+angular.module("myApp", []).controller("firstCtrl", function($scope){
 	
-	//Переменная для кнопки
+	//Переменная "имя"
+	$scope.nameUse = "";
 	
-	
-	//Хранилище данных из формы
-	$scope.taskArray = [];
-	
-	//Функция добавления в хранилище данных из формы и смены кнопки
-	$scope.newBtn = function() {
-		if($scope.tempInput){
-			$scope.taskArray.push($scope.tempInput);
-						$scope.tempInput = "";
+	//Массив для добавления имен
+	$scope.nameArray = [];
+
+	$scope.newButton = "ДОБАВИТЬ";
+
+	//Функция добавления имени в массив
+	$scope.addName = function(){
+		if($scope.nameUse){
+			$scope.nameArray.push($scope.nameUse);
+			$scope.nameUse = "";
+			$scope.newButton = "ДОБАВЛЕНО";
 		}
-		else {
-			consol.log('В инпуте пусто');
+		else{
+			console.log("Поле имени пустое");
 		}
 	}
-	
-});
+
+	$scope.deleteItem = function(item){
+		var index = $scope.nameArray.indexOf(item);
+		console.log(item);
+		$scope.nameArray.splice(index, 1);
+		$scope.newButton = "ДОБАВИТЬ";
+
+	}
+
+})
