@@ -6,7 +6,11 @@ angular.module("myApp", []).controller("firstCtrl", function($scope){
 	//Массив для добавления имен
 	$scope.nameArray = [];
 
+	//Содержание кнопки
 	$scope.newButton = "ДОБАВИТЬ";
+
+	//Класс для измененной кнопки
+	//var quest = angular.element(document.querySelector(".btn-primary "));
 
 	//Функция добавления имени в массив
 	$scope.addName = function(){
@@ -14,6 +18,7 @@ angular.module("myApp", []).controller("firstCtrl", function($scope){
 			$scope.nameArray.push($scope.nameUse);
 			$scope.nameUse = "";
 			$scope.newButton = "ДОБАВЛЕНО";
+			var quest = angular.element('.btn-primary').css('background-color', 'orange');
 		}
 		else{
 			console.log("Поле имени пустое");
