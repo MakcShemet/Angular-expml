@@ -18,7 +18,7 @@ angular.module("myApp", []).controller("firstCtrl", function($scope){
 			$scope.nameArray.push($scope.nameUse);
 			$scope.nameUse = "";
 			$scope.newButton = "ДОБАВЛЕНО";
-			var quest = angular.element('.btn-primary').css('background-color', 'orange');
+			document.getElementById('btn1').style.backgroundColor="orange";
 		}
 		else{
 			console.log("Поле имени пустое");
@@ -30,6 +30,7 @@ angular.module("myApp", []).controller("firstCtrl", function($scope){
 		console.log(item);
 		$scope.nameArray.splice(index, 1);
 		$scope.newButton = "ДОБАВИТЬ";
+		document.getElementById('btn1').style.backgroundColor="#337ab7";
 
 	}
 
