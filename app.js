@@ -9,9 +9,9 @@ angular.module("myApp", []).controller("firstCtrl", function($scope){
 	//Содержание кнопки
 	$scope.newButton = "ДОБАВИТЬ";
 
-	//Класс для измененной кнопки
-	//var quest = angular.element(document.querySelector(".btn-primary "));
-
+	//Кнопка очистки input
+	$scope.clearBtn = "x";
+	
 	//Функция добавления имени в массив
 	$scope.addName = function(){
 		if($scope.nameUse){
