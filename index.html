@@ -5,15 +5,17 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" style="text/css" href="style.css">
 	<script src="angular.min.js"></script>
-	<script src="app.js"></script>
+	<script src="jquery-3.2.1.min.js"></script>>
 	<script src="app_tow.js"></script>
+	
 </head>
-<body >
-
+<body>
+	<script src="app.js"></script>
+<script src="greeter.ts"></script>
 	<div ng-app="myApp" >
 		<div ng-controller="firstCtrl">
 			<form>
-				<input type="text" ng-model="nameUse"/>
+				<input type="text" ng-model="nameUse" ng-change="addReset()"/>
 				<button type="reset">x</button>
 			</form>
 			<br />
@@ -28,23 +30,16 @@
 	</div>
 	<br />
 
-<!--div ng-app="myApps">
-<div ng-controller="towCtrl">
-		<form>
-			<input type="text" ng-model="nameNewUse"/>
-		</form>
-	<br />
-	<div class="form-group">
-		<button type="submit" ng-click="addnewName()">ДОБАВИТЬ</button>
-		</div>
-		
-	<div>
-		<p ng-repeat="nameNewUse in nameNewArray">Hello {{nameNewUse}} !<button>X</button></p>
-	</div>
-	</div>
-</div-->
-
-
+  <h2>Фильтры jQuery</h2>
+    <table border="1" width="300">
+        <tr><td>jQuery</td><td>четная строка</td></tr>
+        <tr><td>jQuery</td><td>нечетная строка</td></tr>
+        <tr><td>jQuery</td><td>четная строка</td></tr>
+        <tr><td>jQuery</td><td>нечетная строка</td></tr>
+        <tr><td>jQuery</td><td>четная строка</td></tr>
+        <tr><td>jQuery</td><td>нечетная строка</td></tr>
+    </table><br>
+    <input type="button" value="Поменять цвет" onclick="addColor3();">
 
 </body>
 </html>

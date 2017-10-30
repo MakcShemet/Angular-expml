@@ -150,3 +150,11 @@ button {
     background: -ms-linear-gradient(top, #e4a465 0%, #e2622f 100%);
 	background: linear-gradient(top, #e4a465 0%, #e2622f 100%);
 }
+
+input[type="text" i]{
+    width: 100%;
+}
+
+input[type="reset" i]{
+    display: none;
+}
