@@ -45,7 +45,7 @@ div {
 
 .btn-primary {
     color: #fff;
-    background-color: #337ab7;
+    background-color: #5284b6;
     border-color: #2e6da4;
 }
 
@@ -149,4 +149,12 @@ button {
     background: -o-linear-gradient(top, #e4a465 0%, #e2622f 100%);
     background: -ms-linear-gradient(top, #e4a465 0%, #e2622f 100%);
 	background: linear-gradient(top, #e4a465 0%, #e2622f 100%);
+}
+
+input[type="text" i]{
+    width: 100%;
+}
+
+input[type="reset" i]{
+       display: none;
 }
