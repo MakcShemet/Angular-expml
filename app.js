@@ -4,7 +4,7 @@ angular.module("myApp", [])
 	$scope.tempInput = "";
 	
 	//Переменная для кнопки
-	$scope.oldBtn = "GET A SHORT INTERNET NUMBER";
+	$scope.oldBtn = "ДОБАВИТЬ";
 	
 	//Хранилище данных из формы
 	$scope.taskArray = [];
@@ -14,8 +14,8 @@ angular.module("myApp", [])
 		if($scope.tempInput){
 			$scope.taskArray.push($scope.tempInput);
 			$scope.tempInput = "";
-			$scope.oldBtn = "YOUR SHORT NUMBER IS RESERVED";
-			$("#btn1").css("background-color", "#e4a465");
+			$scope.oldBtn = "ДОБАВЛЕНО";
+			$("#btn1").addClass('ma-btn-orange');
 			$(":text").css("width", "100%");
 			$("#backRound").css("display", "none");
 		}
@@ -28,16 +28,16 @@ angular.module("myApp", [])
 		var index = $scope.taskArray.indexOf(item);
 		console.log(item);
 		$scope.taskArray.splice(index, 1);
-		$scope.oldBtn = "GET A SHORT INTERNET NUMBER";
-		$("#btn1").css("background-color", "#5284b6");
+		$scope.oldBtn = "ДОБАВИТЬ";
+		$("#btn1").removeClass("ma-btn-orange");
 	}
 
 	$scope.addReset = function(){
 		if($scope.tempInput){
-			$(":text").css("width", "90%");
+			$(":text").css("width", "95%");
 			$("#backRound").css("display", "inline-block");
-			$scope.oldBtn = "GET A SHORT INTERNET NUMBER";
-			$("#btn1").css("background-color", "#5284b6");
+			$scope.oldBtn = "ДОБАВИТЬ";
+			$("#btn1").removeClass("ma-btn-orange");
 		}
 
 	}
@@ -56,11 +56,11 @@ angular.module("myApp", [])
 function addColor3(){
   $("tr:even").css("background-color", "grey");
   $("tr:odd").css("background-color", "blue");
-  $("tr:gt(2)").css("color", "yellow");
+  $("tr:gt(0)").css("color", "yellow");
 }
 
 function backColor (){
 	  $("tr:even").css("background-color", "inherit");
   $("tr:odd").css("background-color", "inherit");
-  $("tr:gt(2)").css("color", "inherit");
+  $("tr:gt(0)").css("color", "inherit");
 }

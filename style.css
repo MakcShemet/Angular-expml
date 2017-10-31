@@ -144,6 +144,7 @@ button {
 }
 
 .ma-btn-orange {
+    color: #fff;
     background: #e4a465;
     background: -moz-linear-gradient(top, #e4a465 0%, #e2622f 100%);
     background: -webkit-linear-gradient(top, #e4a465 0%, #e2622f 100%);
@@ -159,4 +160,26 @@ input[type="text" i]{
 
 input[type="reset" i]{
        display: none;
+}
+
+.flex-container {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+#res1 {
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.game-container {
+    width: 60%;
+    height: auto;
+    background-color:  #5284b6;
+    padding: 20px;
+    position: relative;
+    align-content: center;
 }

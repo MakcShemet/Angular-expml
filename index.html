@@ -17,7 +17,7 @@
 
 	<div>
 		
-		<form>
+		<form class="flex-container">
 			<input type="text" ng-model="tempInput" ng-change="addReset()" />
 			<input type="reset" value="x" id="backRound" ng-click="delReset()" />
 		</form>
@@ -32,7 +32,7 @@
 <button type="reset" value="x" id="res1" ng-click="deleteItem(task)">x</button></p>
 	</div>
 	<br />
-
+<section class="game-container">
   <h2>Фильтры jQuery</h2>
     <table border="1" width="300">
     	<th>jQuery</th><th>четность строки</th>
@@ -46,6 +46,7 @@
     </table><br>
     <input type="button" value="Поменять цвет" onclick="addColor3();" />
     <input type="button" value="Вернуть" onclick="backColor();" />
+</section>
 
 </body>
 </html>
