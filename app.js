@@ -15,7 +15,7 @@ angular.module("myApp", [])
 			$scope.taskArray.push($scope.tempInput);
 			$scope.tempInput = "";
 			$scope.oldBtn = "YOUR SHORT NUMBER IS RESERVED";
-			$("#btn1").css("background-color", "#e4a465");
+			$("#btn1").addClass("ma-btn-orange");
 			$(":text").css("width", "100%");
 			$("#backRound").css("display", "none");
 		}
@@ -29,7 +29,7 @@ angular.module("myApp", [])
 		console.log(item);
 		$scope.taskArray.splice(index, 1);
 		$scope.oldBtn = "GET A SHORT INTERNET NUMBER";
-		$("#btn1").css("background-color", "#5284b6");
+		$("#btn1").removeClass("ma-btn-orange");
 	}
 
 	$scope.addReset = function(){
@@ -37,7 +37,7 @@ angular.module("myApp", [])
 			$(":text").css("width", "90%");
 			$("#backRound").css("display", "inline-block");
 			$scope.oldBtn = "GET A SHORT INTERNET NUMBER";
-			$("#btn1").css("background-color", "#5284b6");
+			$("#btn1").removeClass("ma-btn-orange");
 		}
 
 	}
@@ -49,5 +49,3 @@ angular.module("myApp", [])
 		
 	}
 
-
-});
