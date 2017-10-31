@@ -1,37 +1,51 @@
-angular.module("myApp", []).controller("firstCtrl", function($scope){
+angular.module("myApp", [])
+.controller("firstCtrl", function($scope){
+	//Переменная для формы
+	$scope.tempInput = "";
 	
-	//Переменная "имя"
-	$scope.nameUse = "";
+	//Переменная для кнопки
+	$scope.oldBtn = "GET A SHORT INTERNET NUMBER";
 	
-	//Массив для добавления имен
-	$scope.nameArray = [];
-
-	//Содержание кнопки
-	$scope.newButton = "ДОБАВИТЬ";
-
-	//Кнопка очистки input
-	$scope.clearBtn = "x";
+	//Хранилище данных из формы
+	$scope.taskArray = [];
 	
-	//Функция добавления имени в массив
-	$scope.addName = function(){
-		if($scope.nameUse){
-			$scope.nameArray.push($scope.nameUse);
-			$scope.nameUse = "";
-			$scope.newButton = "ДОБАВЛЕНО";
-			document.getElementById('btn1').style.backgroundColor="orange";
+	//Функция добавления в хранилище данных из формы и смены кнопки
+	$scope.newBtn = function() {
+		if($scope.tempInput){
+			$scope.taskArray.push($scope.tempInput);
+			$scope.tempInput = "";
+			$scope.oldBtn = "YOUR SHORT NUMBER IS RESERVED";
+			$("#btn1").addClass("ma-btn-orange");
+			$(":text").css("width", "100%");
+			$("#backRound").css("display", "none");
 		}
-		else{
-			console.log("Поле имени пустое");
+		else {
+			alert('В инпуте пусто');
 		}
 	}
 
 	$scope.deleteItem = function(item){
-		var index = $scope.nameArray.indexOf(item);
+		var index = $scope.taskArray.indexOf(item);
 		console.log(item);
-		$scope.nameArray.splice(index, 1);
-		$scope.newButton = "ДОБАВИТЬ";
-		document.getElementById('btn1').style.backgroundColor="#337ab7";
+		$scope.taskArray.splice(index, 1);
+		$scope.oldBtn = "GET A SHORT INTERNET NUMBER";
+		$("#btn1").removeClass("ma-btn-orange");
+	}
+
+	$scope.addReset = function(){
+		if($scope.tempInput){
+			$(":text").css("width", "90%");
+			$("#backRound").css("display", "inline-block");
+			$scope.oldBtn = "GET A SHORT INTERNET NUMBER";
+			$("#btn1").removeClass("ma-btn-orange");
+		}
 
 	}
 
-})
+	$scope.delReset = function(){
+			$scope.tempInput = "";
+			$(":text").css("width", "100%");
+			$("#backRound").css("display", "none");
+		
+	}
+
