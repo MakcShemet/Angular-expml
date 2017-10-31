@@ -60,7 +60,7 @@ function addColor3(){
 }
 
 function backColor (){
-	  $("tr:even").css("background-color", "inherit");
-  $("tr:odd").css("background-color", "inherit");
+	  $("tr:even").css("background-color", "#fff");
+  $("tr:odd").css("background-color", "#fff");
   $("tr:gt(0)").css("color", "inherit");
 }

@@ -179,7 +179,11 @@ input[type="reset" i]{
     width: 60%;
     height: auto;
     background-color:  #5284b6;
-    padding: 20px;
+    padding: 5% 10%;
     position: relative;
-    align-content: center;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+    border: solid 2px;
 }
