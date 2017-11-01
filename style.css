@@ -180,10 +180,34 @@ input[type="reset" i]{
     height: auto;
     background-color:  #5284b6;
     padding: 5% 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*css game*/
+
+.game-container {
+    width: 60%;
     position: relative;
     top: 50%;
     left: 20%;
     right: 20%;
     text-align: center;
     border: solid 2px;
+    padding: 5% 10%;
+    text-align: center;
+    background-color: #5284b6;
+    border: solid 2px;
+    display: block;
+}
+
+table {
+    table-layout: auto;
+    
+}
+
+tr, td {
+    width: 5%;
+    padding: 3% 1%;
 }

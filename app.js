@@ -5,6 +5,7 @@ angular.module("myApp", [])
 	
 	//Переменная для кнопки
 	$scope.oldBtn = "ДОБАВИТЬ";
+
 	
 	//Хранилище данных из формы
 	$scope.taskArray = [];
@@ -49,18 +50,17 @@ angular.module("myApp", [])
 		
 	}
 
-
-
 });
 
 function addColor3(){
   $("tr:even").css("background-color", "grey");
   $("tr:odd").css("background-color", "blue");
-  $("tr:gt(0)").css("color", "yellow");
+  $("tr:odd").css("color", "yellow");
 }
 
 function backColor (){
 	  $("tr:even").css("background-color", "#fff");
   $("tr:odd").css("background-color", "#fff");
-  $("tr:gt(0)").css("color", "inherit");
+  $("tr:odd").css("color", "inherit");
 }
+
